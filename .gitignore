@@ -1,0 +1,10 @@
+
+.pydevproject
+
+.project
+
+.settings/.jsdtscope
+
+*.container
+
+*.name
