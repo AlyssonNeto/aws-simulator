@@ -1,4 +1,6 @@
 aws-simulator
 =============
 
-AWS Simulator
+WebSite http://aws.solidit.com.br
+
+AWS Simulator by http://www.solidit.com.br
