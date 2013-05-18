@@ -31,8 +31,10 @@ $(document).ready(function() {
         x2: 1,
         y2: 0
     };
-    
-    // Insere Cabeçalho
+
+    // Insere github ribbons
+    $('body').append("<div class='github'><a href='https://github.com/solidit/aws-simulator'><img src='img/forkme_left_orange_ff7600.png' alt='Fork me on GitHub'></a></div>");
+    // Insere Cabecalho
     $('body').append("<div class='cabecalho'><div class='logo-solid'></div><div class='titulo'>TI tradicional vs Amazon AWS</div><div class='logo-aws'></div></div>");
     // Insere avisos
     $('body').append("<div class='aviso1'></div><div class='aviso2'></div>");
@@ -40,7 +42,7 @@ $(document).ready(function() {
     $('body').append("<div class='dia'></div><div class='noite'></div>");
     $('body').append("<div class='simulador'>Simulador | TI: <button id='ti_aumenta'>+</button> <button id='ti_diminui'>-</button> <button id='reset_ti'>reset</button> - AWS <button id='aws_aumenta'>+</button> <button id='aws_diminui'>-</button> <button id='reset_aws'>reset</button> | <button id='longo_prazo'>Longo prazo</button></div>");
     $('body').append("<div id='container'></div>");
-    
+        
     var chart;
     $('#container').highcharts({
         chart: {
@@ -241,11 +243,9 @@ $(document).ready(function() {
      $('#reset_aws').click(function() {
         gordura_aws = 15;
      });
-
+     
      var prazo = true;
-
-    $('#longo_prazo').click(function() {
-
+     $('#longo_prazo').click(function() {
         if (prazo ==true) { 
         longo_prazo = "<div id='longo_prazo'><iframe src='simulador-solid-aws-longo-prazo.htm'></iframe></div>";
         $('body').append(longo_prazo);
@@ -254,7 +254,5 @@ $(document).ready(function() {
             $('div#longo_prazo').remove();
             prazo = true
         }
-
      });
-
 });
